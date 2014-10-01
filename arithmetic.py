@@ -14,11 +14,21 @@ def subtract(nums):
         i += 1
     return thediff
 
-def multiply(num1, num2):
-    return num1 * num2
+def multiply(nums):
+    product = 1
+    i = 0
+    while i < len(nums):
+        product = product * nums[i]
+        i += 1
+    return product
 
-def divide(num1, num2):
-    return num1 / num2
+def divide(nums):
+    dividend = nums[0] / nums[1]
+    i = 2
+    while i < len(nums):
+        dividend = dividend / nums[i]
+        i += 1
+    return dividend
 
 def square(num1):
     return num1 ** 2
