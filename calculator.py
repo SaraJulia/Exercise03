@@ -22,15 +22,27 @@ def main():
         elif tokens[0] == "/":
             print arithmetic.divide(listofnums)
         elif tokens[0] == "square":
-            print arithmetic.square(tokens[1])
+            if len(tokens) != 2:
+                print "The square function takes only one argument." 
+            else:
+                print arithmetic.square(float(tokens[1]))
         elif tokens[0] == "cube":
-            print arithmetic.cube(tokens[1])
+            if len(tokens) != 2:
+                print "The cube function requires two arguments."
+            else:
+                print arithmetic.cube(float(tokens[1]))
         elif tokens[0] == "pow":
-            print arithmetic.power(listofnums)
+            if len(tokens) != 3:
+                print "The power function requires two arguments."
+            else:
+                print arithmetic.power(float(tokens[1]), float(tokens[2]))
         elif tokens[0] == "mod":
-            print artnthmetic.mod(listofnums)
+            if len(tokens) != 3:
+                print "The mod function requires two arguments."
+            else:
+                print arithmetic.mod(float(tokens[1]), float(tokens[2]))
         else:
-            print "enter a valid expression"
+            print "Enter a valid expression."
 
 if __name__ == "__main__":
     main()
